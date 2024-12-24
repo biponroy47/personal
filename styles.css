@@ -3,14 +3,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100svh; /* Full viewport height for Safari compatibility */
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
 /* Remove default margin and padding */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,20 +34,21 @@ footer {
 
 p,
 hr {
-  width: 35%; /* Limit width to half of the screen size on desktop */
-  margin: 0 auto; /* Center the paragraph on the page */
+  width: 35%; /* Limit width to 35% */
+  margin: 0 auto;
   margin-top: 2rem;
-  text-align: justify; /* Stretch text to fill the width */
-  line-height: 1.5; /* Add spacing between lines for readability */
-  font-family: 'Arial', serif; /* Use a serif font for a book-like feel */
-  font-size: 1rem; /* Adjust font size for readability */
+  text-align: justify;
+  text-justify: inter-word; /* Safari-specific alignment fix */
+  line-height: 1.5em; /* Add fallback */
+  font-family: Arial, sans-serif; /* Consistent sans-serif */
+  font-size: 1rem;
 }
 
 /* Media query for tablets */
 @media (max-width: 1024px) {
   p,
   hr {
-    width: 60%; /* Adjust width for tablets */
+    width: 60%;
   }
 }
 
@@ -53,7 +56,7 @@ hr {
 @media (max-width: 768px) {
   p,
   hr {
-    width: 85%; /* Adjust width for smaller screens */
+    width: 85%;
   }
 }
 
