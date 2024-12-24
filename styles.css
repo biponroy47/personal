@@ -29,3 +29,34 @@ footer {
   font-size: 0.8rem;
   color: #555;
 }
+
+p,
+hr {
+  width: 35%; /* Limit width to half of the screen size on desktop */
+  margin: 0 auto; /* Center the paragraph on the page */
+  margin-top: 2rem;
+  text-align: justify; /* Stretch text to fill the width */
+  line-height: 1.5; /* Add spacing between lines for readability */
+  font-family: 'Arial', serif; /* Use a serif font for a book-like feel */
+  font-size: 1rem; /* Adjust font size for readability */
+}
+
+/* Media query for tablets */
+@media (max-width: 1024px) {
+  p,
+  hr {
+    width: 60%; /* Adjust width for tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  p,
+  hr {
+    width: 85%; /* Adjust width for smaller screens */
+  }
+}
+
+hr {
+  margin-bottom: 3rem;
+}
