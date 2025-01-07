@@ -5,7 +5,9 @@ body {
   align-items: center;
   height: 100svh; /* Full viewport height for Safari compatibility */
   margin: 0;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  /* font-family: Verdana, sans-serif; */
+  font-family: Tahoma, sans-serif;
   text-align: center;
 }
 
@@ -19,11 +21,12 @@ body {
 }
 
 h1 {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -62,4 +65,14 @@ hr {
 
 hr {
   margin-bottom: 3rem;
+}
+
+.tdl {
+  text-align: right;
+  width: 50ch;
+}
+
+.tdr {
+  text-align: left;
+  width: 50ch;
 }
